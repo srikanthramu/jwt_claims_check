@@ -13,6 +13,7 @@ def get_missing_id_token_claims(decoded_jwt):
     return get_missing_claims(decoded_jwt, ID_TOKEN_CLAIMS)
 
 
+# Compares the input claims with standard predefined claims 
 def get_missing_claims(decoded_jwt, std_claims):
     claim_set = set()
     for claim in decoded_jwt:
